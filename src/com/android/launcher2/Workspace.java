@@ -1238,21 +1238,39 @@ public class Workspace extends ViewGroup implements DropTarget, DragSource, Drag
     }
 
     public void scrollLeft() {
-        clearVacantCache();
-        if (mScroller.isFinished()) {
-            if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
-        } else {
-            if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
-        }
+    	if (mRTL) {
+		    clearVacantCache();
+		    if (mScroller.isFinished()) {
+		        if (mCurrentScreen < getChildCount() -1) snapToScreen(mCurrentScreen + 1);
+		    } else {
+		        if (mNextScreen < getChildCount() -1) snapToScreen(mNextScreen + 1);            
+		    }
+    	} else {
+            clearVacantCache();
+            if (mScroller.isFinished()) {
+                if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
+            } else {
+                if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
+            }
+    	}
     }
 
     public void scrollRight() {
-        clearVacantCache();
-        if (mScroller.isFinished()) {
-            if (mCurrentScreen < getChildCount() -1) snapToScreen(mCurrentScreen + 1);
-        } else {
-            if (mNextScreen < getChildCount() -1) snapToScreen(mNextScreen + 1);            
-        }
+    	if (mRTL) {
+	        clearVacantCache();
+	        if (mScroller.isFinished()) {
+	            if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
+	        } else {
+	            if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
+	        }
+    	} else {
+	        clearVacantCache();
+	        if (mScroller.isFinished()) {
+	            if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
+	        } else {
+	            if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
+	        }
+    	}
     }
 
     public int getScreenForView(View v) {
