@@ -35,7 +35,6 @@ import android.graphics.Typeface;
 import android.text.Layout.Alignment;
 import android.text.StaticLayout;
 import android.text.TextPaint;
-import android.text.FriBidi;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.content.res.Resources;
@@ -322,8 +321,6 @@ final class Utilities {
             b.setDensity(mDensity);
             Canvas c = new Canvas(b);
 
-            FriBidi fribidi = new FriBidi(text);
-
             StaticLayout layout = new StaticLayout(text, mTextPaint, (int)mTextWidth,
                     Alignment.ALIGN_CENTER, 1, 0, true);
             int lineCount = layout.getLineCount();
@@ -338,9 +335,7 @@ final class Utilities {
             for (int i=0; i<lineCount; i++) {
                 //int x = (int)((mBubbleRect.width() - layout.getLineMax(i)) / 2.0f);
                 //int y = mFirstLineY + (i * mLineHeight);
-                // final String lineText = text.substring(layout.getLineStart(i), layout.getLineEnd(i));
-                fribidi.reorder(layout.getLineStart(i), layout.getLineEnd(i) - 1);
-                final String lineText = fribidi.str.substring(layout.getLineStart(i), layout.getLineEnd(i));
+                final String lineText = text.substring(layout.getLineStart(i), layout.getLineEnd(i));
                 int x = (int)(mBubbleRect.left
                         + ((mBubbleRect.width() - mTextPaint.measureText(lineText)) * 0.5f));
                 int y = mFirstLineY + (i * mLineHeight);
