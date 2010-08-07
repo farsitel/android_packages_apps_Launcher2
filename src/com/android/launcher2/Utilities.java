@@ -339,7 +339,7 @@ final class Utilities {
                 //int x = (int)((mBubbleRect.width() - layout.getLineMax(i)) / 2.0f);
                 //int y = mFirstLineY + (i * mLineHeight);
                 // final String lineText = text.substring(layout.getLineStart(i), layout.getLineEnd(i));
-                fribidi.reorder(layout.getLineStart(i), layout.getLineEnd(i) - layout.getLineStart(i));
+                fribidi.reorder(layout.getLineStart(i), layout.getLineEnd(i) - 1);
                 final String lineText = fribidi.str.substring(layout.getLineStart(i), layout.getLineEnd(i));
                 int x = (int)(mBubbleRect.left
                         + ((mBubbleRect.width() - mTextPaint.measureText(lineText)) * 0.5f));
