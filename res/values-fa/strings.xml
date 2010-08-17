@@ -132,10 +132,4 @@
     <!-- Text to show user in place of a gadget when we can't display it properly -->
     <string name="gadget_error_text">مشکل در بار کردن ویجت</string>
 
-    <!-- URL to use when detecting the current default browser. 
-         Attempts to mimic homepage_base in Browser; {CID} should be replaced
-         by the client-id, e.g. "android-google". -->
-    <string name="default_browser_url" translatable="false">
-        http://www.google.com/m?client=ms-{CID}&amp;source=android-home-hotseat</string>
-
 </resources>
