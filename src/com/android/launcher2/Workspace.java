@@ -1238,39 +1238,35 @@ public class Workspace extends ViewGroup implements DropTarget, DragSource, Drag
     }
 
     public void scrollLeft() {
-    	if (mRTL) {
-		    clearVacantCache();
-		    if (mScroller.isFinished()) {
-		        if (mCurrentScreen < getChildCount() -1) snapToScreen(mCurrentScreen + 1);
-		    } else {
-		        if (mNextScreen < getChildCount() -1) snapToScreen(mNextScreen + 1);            
-		    }
-    	} else {
-            clearVacantCache();
-            if (mScroller.isFinished()) {
-                if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
-            } else {
-                if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
-            }
-    	}
+        clearVacantCache();
+        if (mScroller.isFinished()) {
+            if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
+        } else {
+            if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
+        }
     }
 
     public void scrollRight() {
-    	if (mRTL) {
-	        clearVacantCache();
-	        if (mScroller.isFinished()) {
-	            if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
-	        } else {
-	            if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
-	        }
-    	} else {
-	        clearVacantCache();
-	        if (mScroller.isFinished()) {
-	            if (mCurrentScreen > 0) snapToScreen(mCurrentScreen - 1);
-	        } else {
-	            if (mNextScreen > 0) snapToScreen(mNextScreen - 1);            
-	        }
-    	}
+        clearVacantCache();
+        if (mScroller.isFinished()) {
+            if (mCurrentScreen < getChildCount() -1) snapToScreen(mCurrentScreen + 1);
+        } else {
+            if (mNextScreen < getChildCount() -1) snapToScreen(mNextScreen + 1);            
+        }
+    }
+
+    public void scrollNext() {
+        if (mRTL)
+            scrollLeft();
+        else
+            scrollRight();
+    }
+    
+    public void scrollPrevious() {
+        if (mRTL)
+            scrollRight();
+        else
+            scrollLeft();
     }
 
     public int getScreenForView(View v) {

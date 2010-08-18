@@ -52,6 +52,7 @@ import android.os.Parcelable;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.provider.LiveFolders;
+import android.text.FriBidi;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -761,14 +762,14 @@ public final class Launcher extends Activity
     @SuppressWarnings({"UnusedDeclaration"})
     public void previousScreen(View v) {
         if (!isAllAppsVisible()) {
-            mWorkspace.scrollLeft();
+            mWorkspace.scrollPrevious();
         }
     }
 
     @SuppressWarnings({"UnusedDeclaration"})
     public void nextScreen(View v) {
         if (!isAllAppsVisible()) {
-            mWorkspace.scrollRight();
+            mWorkspace.scrollNext();
         }
     }
 
@@ -1662,15 +1663,13 @@ public final class Launcher extends Activity
         PreviewTouchHandler handler = new PreviewTouchHandler(anchor);
         ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>(count);
 
-        boolean rtl = false;
-        if ("fa".equals(Locale.getDefault().getLanguage())
-            || "ar".equals(Locale.getDefault().getLanguage())
-            || "he".equals(Locale.getDefault().getLanguage())) {
-        	rtl = true;
-        }
+        boolean rtl = FriBidi.isRTL();
 
         for (int i = start; i < end; i++) {
-        	int mirroredI = end - i - 1;
+        	int mirroredI = i;
+        	if (rtl)
+        	    mirroredI = end - i - 1;
+
             ImageView image = new ImageView(this);
             cell = (CellLayout) workspace.getChildAt(mirroredI);
 
