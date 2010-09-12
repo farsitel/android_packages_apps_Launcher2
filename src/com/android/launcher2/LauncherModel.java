@@ -313,7 +313,12 @@ public class LauncherModel extends BroadcastReceiver {
         synchronized (mAllAppsListLock) {
             final String action = intent.getAction();
 
-            if (Intent.ACTION_PACKAGE_CHANGED.equals(action)
+            if (Intent.ACTION_LOCALE_CHANGED.equals(action)) {
+                 synchronized (this) {
+                     mAllAppsLoaded = mWorkspaceLoaded = false;
+                 }
+                 startLoader(context, false);
+            } else if (Intent.ACTION_PACKAGE_CHANGED.equals(action)
                     || Intent.ACTION_PACKAGE_REMOVED.equals(action)
                     || Intent.ACTION_PACKAGE_ADDED.equals(action)) {
                 final String packageName = intent.getData().getSchemeSpecificPart();
@@ -403,11 +408,6 @@ public class LauncherModel extends BroadcastReceiver {
                      if (packages == null || packages.length == 0) {
                          return;
                      }
-                     synchronized (this) {
-                         mAllAppsLoaded = mWorkspaceLoaded = false;
-                     }
-                     startLoader(context, false);
-                } else if (Intent.ACTION_LOCALE_CHANGED.equals(action)) {
                      synchronized (this) {
                          mAllAppsLoaded = mWorkspaceLoaded = false;
                      }
