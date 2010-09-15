@@ -18,9 +18,7 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Manifest configuration. -->
-    <skip />
-        <!-- General -->
+    <!-- General -->
     <skip />
     <!-- Application name -->
     <string name="application_name">اجراکننده</string>
@@ -29,15 +27,15 @@
     <!-- Default folder name -->
     <string name="folder_name">پوشه</string>
     <!-- Title of dialog that appears after user selects Wallpaper from menu -->
-    <string name="chooser_wallpaper">انتخاب کاغذدیواری از</string>
+    <string name="chooser_wallpaper">انتخاب کاغذ دیواری از</string>
     <!-- Button label on Wallpaper Gallery screen; user selects this button to set a specific wallpaper -->
-    <string name="wallpaper_instructions">تنظیم کاغذدیواری</string>
+    <string name="wallpaper_instructions">تنظیم کاغذ دیواری</string>
     <!-- Option in "Select wallpaper from" dialog box -->
-    <string name="pick_wallpaper">کاغذدیواری‌ها</string>
+    <string name="pick_wallpaper">کاغذ دیواری‌ها</string>
     <!-- Displayed when user selects a shortcut for an app that was uninstalled -->
     <string name="activity_not_found">برنامه بر روی گوشی شما نصب نشده است.</string>
     <!-- List item for configuring the current wallpaper -->
-    <string name="configure_wallpaper">پیکربندی...</string>
+    <string name="configure_wallpaper">تنظیم...</string>
 
     <!-- Folders -->
     <skip />
@@ -46,9 +44,9 @@
     <!-- Title of dialog box -->
     <string name="rename_folder_title">تغییر نام پوشه</string>
     <!-- Buttons in Rename folder dialog box -->
-    <string name="rename_action">قبول</string>
+    <string name="rename_action">تأیید</string>
     <!-- Buttons in Rename folder dialog box -->
-    <string name="cancel_action">لغو</string>
+    <string name="cancel_action">انصراف</string>
 
     <!-- Shortcuts -->
     <skip />
@@ -65,7 +63,7 @@
     <!-- Options in "Add to Home" dialog box; Title of the group containing the list of all widgets/gadgets -->
     <string name="group_widgets">ویجت‌ها</string>
     <!-- Options in "Add to Home" dialog box; Title of the group containing the list of apps that can set the wallpaper-->
-    <string name="group_wallpapers">کاغذدیواری‌ها</string>
+    <string name="group_wallpapers">کاغذ دیواری‌ها</string>
     <!-- Options in "Add to Home" dialog box; Name of the Folder widget-->
     <string name="add_folder">پوشه</string>
     <!-- Options in "Add to Home" dialog box; Name of the Clock widget-->
@@ -73,18 +71,18 @@
     <!-- Options in "Add to Home" dialog box; Name of the Picture frame widget-->
     <string name="add_photo_frame">قاب عکس</string>
     <!-- Error message when user has filled a home screen, possibly not used -->
-    <string name="out_of_space">فضای بیشتری در این صفحهٔ خانه وجود ندارد.</string>
+    <string name="out_of_space">این صفحهٔ خانه پر شده است.</string>
     <!-- Message displayed when a shortcut is created by an external application -->
-    <string name="shortcut_installed">میانبُر \"<xliff:g id="name" example="Browser">%s</xliff:g>\" ایجاد شد.</string>
+    <string name="shortcut_installed">میانبُر «<xliff:g id="name" example="Browser">%Ls</xliff:g>» ساخته شد.</string>
     <!-- Message displayed when a shortcut is uninstalled by an external application -->
-    <string name="shortcut_uninstalled">میانبُر \"<xliff:g id="name" example="Browser">%s</xliff:g>\" حذف شد.</string>
+    <string name="shortcut_uninstalled">میانبُر «<xliff:g id="name" example="Browser">%Ls</xliff:g>» حذف شد.</string>
     <!-- Message displayed when an external application attemps to create a shortcut that already exists -->
-    <string name="shortcut_duplicate">میانبُر \"<xliff:g id="name" example="Browser">%s</xliff:g>\" در حال حاضر وجود دارد.</string>
+    <string name="shortcut_duplicate">میانبُر «<xliff:g id="name" example="Browser">%Ls</xliff:g>» از قبل وجود دارد.</string>
 
     <!-- Title of dialog when user is selecting shortcut to add to homescreen -->
     <string name="title_select_shortcut">انتخاب میانبُر</string>
     <!-- Title of dialog when user is selecting live folder to add to homescreen -->
-    <string name="title_select_live_folder">اانتخاب پوشه</string>
+    <string name="title_select_live_folder">انتخاب پوشه</string>
 
     <!-- All applications label for accessibilty (spoken when the button gets focus). -->
     <string name="all_apps_button_label">همهٔ برنامه‌ها</string>
@@ -97,13 +95,13 @@
     <!-- Verb, menu item used to add an item on the desktop -->
     <string name="menu_add">افزودن</string>
     <!-- Noun, menu item used to set the desktop's wallpaper -->
-    <string name="menu_wallpaper">کاغذدیواری</string>
+    <string name="menu_wallpaper">کاغذ دیواری</string>
     <!-- Verb, menu item used to initiate global search -->
     <string name="menu_search">جستجو</string>
     <!-- Noun, menu item used to bring down the notifications shade -->
-    <string name="menu_notifications">اطلاع‌ها</string>
+    <string name="menu_notifications">خبرها</string>
     <!-- Noun, menu item used to show the gestures settings -->
-    <string name="menu_gestures">حرکات لمسی</string>
+    <string name="menu_gestures">دستورات حرکتی</string>
     <!-- Noun, menu item used to show the system settings -->
     <string name="menu_settings">تنظیمات</string>
 
@@ -112,24 +110,24 @@
     <!-- Permission short label -->
     <string name="permlab_install_shortcut">نصب میانبُرها</string>
     <!-- Permission description -->
-    <string name="permdesc_install_shortcut">به برنامه اجازه می‌دهد که بدون دخالت کاربر میانبُرهایی بیافزاید.</string>
+    <string name="permdesc_install_shortcut">به برنامه اجازهٔ افزودن میانبُرها بدون دخالت کاربر داده شود.</string>
     <!-- Permission short label -->
-    <string name="permlab_uninstall_shortcut">عزل میانبُرها</string>
+    <string name="permlab_uninstall_shortcut">حذف میانبُرها</string>
     <!-- Permission description -->
-    <string name="permdesc_uninstall_shortcut">به برنامه اجازه می‌دهد که بدون دخالت کاربر میانبرُهایی را حذف کند.</string>
+    <string name="permdesc_uninstall_shortcut">به برنامه اجازهٔ حذف میانبُرها بدون دخالت کاربر داده شود.</string>
     <!-- Permission short label -->
-    <string name="permlab_read_settings">خواندن تنظیمات و میانبرًهای خانه</string>
+    <string name="permlab_read_settings">خواندن تنظیمات و میانبُرهای خانه</string>
     <!-- Permission description -->
-    <string name="permdesc_read_settings">به برنامه اجازه می‌دهد که تنظیمات و میانبُرهای خانه را بخواند.</string>
+    <string name="permdesc_read_settings">به برنامه اجازهٔ خواندن تنظیمات و میانبُرهای خانه داده شود.</string>
     <!-- Permission short label -->
-    <string name="permlab_write_settings">نوشتن تنظیمات و میانبُرهای خانه</string>
+    <string name="permlab_write_settings">تغییر تنظیمات و میانبُرهای خانه</string>
     <!-- Permission description -->
-    <string name="permdesc_write_settings">به برنامه اجازه می‌دهد که تنظیمات و میانبُرهای خانه را تغییر دهد.</string>
+    <string name="permdesc_write_settings">به برنامه اجازهٔ تغییر تنظیمات و میانبُرهای خانه داده شود.</string>
 
     <!-- Widgets: -->
     <skip />    
 
     <!-- Text to show user in place of a gadget when we can't display it properly -->
-    <string name="gadget_error_text">مشکل در بار کردن ویجت</string>
+    <string name="gadget_error_text">مشکل در نمایش ویجت</string>
 
 </resources>
