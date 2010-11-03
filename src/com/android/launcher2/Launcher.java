@@ -287,6 +287,7 @@ public final class Launcher extends Activity
             mIconCache.flush();
 
             loadHotseats();
+            mAllAppsGrid.setApps(null);
         }
     }
 
