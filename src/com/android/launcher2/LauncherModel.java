@@ -314,10 +314,8 @@ public class LauncherModel extends BroadcastReceiver {
             final String action = intent.getAction();
 
             if (Intent.ACTION_LOCALE_CHANGED.equals(action)) {
-                 synchronized (this) {
-                     mAllAppsLoaded = mWorkspaceLoaded = false;
-                 }
-                 startLoader(context, false);
+                int pid = Process.myPid();
+                Process.killProcess(pid);
             } else if (Intent.ACTION_PACKAGE_CHANGED.equals(action)
                     || Intent.ACTION_PACKAGE_REMOVED.equals(action)
                     || Intent.ACTION_PACKAGE_ADDED.equals(action)) {

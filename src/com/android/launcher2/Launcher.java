@@ -49,7 +49,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
-import android.os.Process;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.provider.LiveFolders;
@@ -280,8 +279,6 @@ public final class Launcher extends Activity
         boolean localeChanged = !locale.equals(previousLocale) || mcc != previousMcc || mnc != previousMnc;
 
         if (localeChanged) {
-            int pid = Process.myPid();
-            Process.killProcess(pid);
             localeConfiguration.locale = locale;
             localeConfiguration.mcc = mcc;
             localeConfiguration.mnc = mnc;
