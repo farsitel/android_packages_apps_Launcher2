@@ -565,7 +565,7 @@ public class AllApps3D extends RSSurfaceView
             }
         }
         if (mRTL) {
-            col = columnsCount - col;
+            col = columnsCount - col - 1;
         }
         final int rowsCount = mRowsPerPage;
         for (int i=0; i< rowsCount; i++) {
