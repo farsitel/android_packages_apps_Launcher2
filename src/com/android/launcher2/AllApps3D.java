@@ -484,26 +484,51 @@ public class AllApps3D extends RSSurfaceView
                 break;
             }
             case KeyEvent.KEYCODE_DPAD_LEFT:
-                if (mLastSelection != SELECTION_HOME) {
-                    if (currentPageCol > 0) {
-                        newSelection = currentSelection - 1;
+                if (mRTL) {
+                    if (mLastSelection != SELECTION_HOME) {
+                        if (!isPortrait && (currentPageCol == mColumnsPerPage - 1 ||
+                                currentSelection == iconCount - 1)) {
+                            newSelection = -1;
+                            sRollo.setHomeSelected(SELECTED_FOCUSED);
+                        } else if ((currentPageCol < mColumnsPerPage - 1) &&
+                                (currentSelection < iconCount - 1)) {
+                            newSelection = currentSelection + 1;
+                        }
                     }
-                } else if (!isPortrait) {
-                    newSelection = ((int) (sRollo.mScrollPos) * mColumnsPerPage) +
-                            (mRowsPerPage / 2 * mColumnsPerPage) + mColumnsPerPage - 1;
-                    sRollo.setHomeSelected(SELECTED_NONE);
+                } else {
+                    if (mLastSelection != SELECTION_HOME) {
+                        if (currentPageCol > 0) {
+                            newSelection = currentSelection - 1;
+                        }
+                    } else if (!isPortrait) {
+                        newSelection = ((int) (sRollo.mScrollPos) * mColumnsPerPage) +
+                                (mRowsPerPage / 2 * mColumnsPerPage) + mColumnsPerPage - 1;
+                        sRollo.setHomeSelected(SELECTED_NONE);
+                    }
                 }
                 handled = true;
                 break;
             case KeyEvent.KEYCODE_DPAD_RIGHT:
-                if (mLastSelection != SELECTION_HOME) {
-                    if (!isPortrait && (currentPageCol == mColumnsPerPage - 1 ||
-                            currentSelection == iconCount - 1)) {
-                        newSelection = -1;
-                        sRollo.setHomeSelected(SELECTED_FOCUSED);
-                    } else if ((currentPageCol < mColumnsPerPage - 1) &&
-                            (currentSelection < iconCount - 1)) {
-                        newSelection = currentSelection + 1;
+                if (mRTL) {
+                    if (mLastSelection != SELECTION_HOME) {
+                        if (currentPageCol > 0) {
+                            newSelection = currentSelection - 1;
+                        }
+                    } else if (!isPortrait) {
+                        newSelection = ((int) (sRollo.mScrollPos) * mColumnsPerPage) +
+                                (mRowsPerPage / 2 * mColumnsPerPage) + mColumnsPerPage - 1;
+                        sRollo.setHomeSelected(SELECTED_NONE);
+                    }
+                } else {
+                    if (mLastSelection != SELECTION_HOME) {
+                        if (!isPortrait && (currentPageCol == mColumnsPerPage - 1 ||
+                                currentSelection == iconCount - 1)) {
+                            newSelection = -1;
+                            sRollo.setHomeSelected(SELECTED_FOCUSED);
+                        } else if ((currentPageCol < mColumnsPerPage - 1) &&
+                                (currentSelection < iconCount - 1)) {
+                            newSelection = currentSelection + 1;
+                        }
                     }
                 }
                 handled = true;
