@@ -35,7 +35,7 @@
     <!-- Displayed when user selects a shortcut for an app that was uninstalled -->
     <string name="activity_not_found">برنامه بر روی گوشی شما نصب نشده است.</string>
     <!-- List item for configuring the current wallpaper -->
-    <string name="configure_wallpaper">تنظیم...</string>
+    <string name="configure_wallpaper">تنظیم\u2026</string>
 
     <!-- Folders -->
     <skip />
