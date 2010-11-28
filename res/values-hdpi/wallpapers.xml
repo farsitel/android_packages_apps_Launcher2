@@ -17,30 +17,38 @@
 
 <resources>
     <string-array name="wallpapers" translatable="false">
-        <item>wallpaper_electric</item>
+        <item>wallpaper_bokeh</item>
+        <item>wallpaper_circles</item>
+        <item>wallpaper_fandoghloo</item>
+        <item>wallpaper_fire</item>
+        <item>wallpaper_focus</item>
+        <item>wallpaper_green</item>
+        <item>wallpaper_hormoz</item>
+        <item>wallpaper_lines</item>
+        <item>wallpaper_mosque</item>
+        <item>wallpaper_parrot</item>
+        <item>wallpaper_plane</item>
+        <item>wallpaper_pool</item>
+        <item>wallpaper_river</item>
+        <item>wallpaper_roodkhan</item>
+        <item>wallpaper_salt</item>
+        <item>wallpaper_sky</item>
+        <item>wallpaper_snake</item>
+        <item>wallpaper_solid</item>
+        <item>wallpaper_tiles</item>
+        <item>wallpaper_turtle</item>
         <item>wallpaper_grass</item>
         <item>wallpaper_canyon</item>
         <item>wallpaper_monumentvalley</item>
         <item>wallpaper_tree</item>
         <item>wallpaper_zanzibar</item>
-        <item>wallpaper_field</item>
-        <item>wallpaper_cloud</item>
         <item>wallpaper_desert</item>
-        <item>wallpaper_samghabad</item>
-        <item>wallpaper_flower1</item>
         <item>wallpaper_goldengate</item>
         <item>wallpaper_despair</item>
-        <item>wallpaper_grass_night</item>
-        <item>wallpaper_galaxy</item>
-        <item>wallpaper_x67</item>
-        <item>wallpaper_nexusrain</item>
-        <item>wallpaper_nexuspattern</item>
-        <item>wallpaper_nexuswallpaper1</item>
         <item>wallpaper_brown</item>
         <item>wallpaper_pcut</item>
         <item>wallpaper_bluedotgrid</item>
         <item>wallpaper_hazybluedots</item>
-        <item>wallpaper_ropelights</item>
         <item>wallpaper_gray</item>
         <item>wallpaper_greengray</item>
         <item>wallpaper_lightgrad</item>
