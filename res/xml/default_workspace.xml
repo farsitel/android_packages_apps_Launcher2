@@ -17,6 +17,15 @@
 <favorites xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher">
     <!--  Far-left screen [0] -->
 
+    <appwidget
+        launcher:packageName="com.android.settings"
+        launcher:className="com.android.settings.widget.SettingsAppWidgetProvider"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4"
+        launcher:spanY="1" />
+
     <!--  Left screen [1] -->
         
     <appwidget
@@ -28,25 +37,16 @@
         launcher:spanX="4"
         launcher:spanY="1" />
 
-    <appwidget
-        launcher:packageName="com.android.settings"
-        launcher:className="com.android.settings.widget.SettingsAppWidgetProvider"
-        launcher:screen="1"
-        launcher:x="0"
-        launcher:y="1"
-        launcher:spanX="4"
-        launcher:spanY="1" />
-
     <favorite
-        launcher:packageName="com.htc.flashlight"
-        launcher:className="com.htc.flashlight.FlashlightActivity"
+        launcher:packageName="com.farsitel.android.qiblacompass"
+        launcher:className="com.farsitel.android.qiblacompass.activities.QiblaActivity"
         launcher:screen="1"
         launcher:x="0"
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.htc.android.teeter"
-        launcher:className="com.htc.android.teeter.CCoverActivity"
+        launcher:packageName="com.farsitel.apps.metro.ui_layer"
+        launcher:className="com.farsitel.apps.metro.ui_layer.Metro"
         launcher:screen="1"
         launcher:x="1"
         launcher:y="3" />
@@ -59,28 +59,19 @@
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.android.camera"
-        launcher:className="com.android.camera.Camera"
+        launcher:packageName="com.farsitel.apps.rira"
+        launcher:className="com.farsitel.apps.rira.PoetsList"
         launcher:screen="1"
         launcher:x="3"
         launcher:y="3" />
 
     <!--  Middle screen [2] -->
     <appwidget
-        launcher:packageName="com.farsitel.weather"
-        launcher:className="com.farsitel.weather.MedAppWidget"
-        launcher:screen="2"
-        launcher:x="1"
-        launcher:y="0"
-        launcher:spanX="2"
-        launcher:spanY="1" />
-
-    <appwidget
         launcher:packageName="com.farsitel.welcome"
         launcher:className="com.farsitel.welcome.WelcomeWidget"
         launcher:screen="2"
         launcher:x="0"
-        launcher:y="1"
+        launcher:y="0"
         launcher:spanX="4"
         launcher:spanY="2" />
 
@@ -92,15 +83,15 @@
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.farsitel.apps.rira"
-        launcher:className="com.farsitel.apps.rira.PoetsList"
+        launcher:packageName="com.google.android.talk"
+        launcher:className="com.google.android.talk.SigningInActivity"
         launcher:screen="2"
         launcher:x="1"
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.farsitel.bazaar"
-        launcher:className="com.farsitel.bazaar.MainActivity"
+        launcher:packageName="com.android.contacts"
+        launcher:className="com.android.contacts.DialtactsContactsEntryActivity"
         launcher:screen="2"
         launcher:x="2"
         launcher:y="3" />
@@ -153,8 +144,8 @@
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.google.android.talk"
-        launcher:className="com.google.android.talk.SigningInActivity"
+        launcher:packageName="com.farsitel.bazaar"
+        launcher:className="com.farsitel.bazaar.MainActivity"
         launcher:screen="3"
         launcher:x="3"
         launcher:y="3" />
