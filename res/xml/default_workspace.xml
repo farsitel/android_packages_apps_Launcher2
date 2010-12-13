@@ -17,36 +17,36 @@
 <favorites xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher">
     <!--  Far-left screen [0] -->
 
+    <!--  Left screen [1] -->
+        
     <appwidget
         launcher:packageName="com.android.settings"
         launcher:className="com.android.settings.widget.SettingsAppWidgetProvider"
-        launcher:screen="0"
+        launcher:screen="1"
         launcher:x="0"
         launcher:y="0"
         launcher:spanX="4"
         launcher:spanY="1" />
 
-    <!--  Left screen [1] -->
-        
     <appwidget
         launcher:packageName="com.android.music"
         launcher:className="com.android.music.MediaAppWidgetProvider"
         launcher:screen="1"
         launcher:x="0"
-        launcher:y="0"
+        launcher:y="1"
         launcher:spanX="4"
         launcher:spanY="1" />
 
     <favorite
-        launcher:packageName="com.farsitel.android.qiblacompass"
-        launcher:className="com.farsitel.android.qiblacompass.activities.QiblaActivity"
+        launcher:packageName="com.google.android.talk"
+        launcher:className="com.google.android.talk.SigningInActivity"
         launcher:screen="1"
         launcher:x="0"
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.farsitel.apps.metro.ui_layer"
-        launcher:className="com.farsitel.apps.metro.ui_layer.Metro"
+        launcher:packageName="com.android.deskclock"
+        launcher:className="com.android.deskclock.DeskClock"
         launcher:screen="1"
         launcher:x="1"
         launcher:y="3" />
@@ -71,84 +71,39 @@
         launcher:className="com.farsitel.welcome.WelcomeWidget"
         launcher:screen="2"
         launcher:x="0"
-        launcher:y="0"
+        launcher:y="1"
         launcher:spanX="4"
         launcher:spanY="2" />
-
-    <favorite
-        launcher:packageName="com.google.android.gm"
-        launcher:className="com.google.android.gm.ConversationListActivityGmail"
-        launcher:screen="2"
-        launcher:x="0"
-        launcher:y="3" />
-
-    <favorite
-        launcher:packageName="com.google.android.talk"
-        launcher:className="com.google.android.talk.SigningInActivity"
-        launcher:screen="2"
-        launcher:x="1"
-        launcher:y="3" />
-
-    <favorite
-        launcher:packageName="com.android.contacts"
-        launcher:className="com.android.contacts.DialtactsContactsEntryActivity"
-        launcher:screen="2"
-        launcher:x="2"
-        launcher:y="3" />
 
     <favorite
         launcher:packageName="com.android.mms"
         launcher:className="com.android.mms.ui.ConversationList"
         launcher:screen="2"
-        launcher:x="3"
-        launcher:y="3" />
-
-    <!--  Right screen [3] -->
-    <appwidget
-        launcher:packageName="com.android.deskclock"
-        launcher:className="com.android.alarmclock.AnalogAppWidgetProvider"
-        launcher:screen="3"
-        launcher:x="0"
-        launcher:y="0"
-        launcher:spanX="2"
-        launcher:spanY="2" />
-
-    <appwidget
-        launcher:packageName="com.android.providers.calendar"
-        launcher:className="com.android.providers.calendar.CalendarAppWidgetProvider"
-        launcher:screen="3"
-        launcher:x="2"
-        launcher:y="0"
-        launcher:spanX="2"
-        launcher:spanY="2" />
-
-    <favorite
-        launcher:packageName="com.android.deskclock"
-        launcher:className="com.android.deskclock.DeskClock"
-        launcher:screen="3"
         launcher:x="0"
         launcher:y="3" />
 
     <favorite
         launcher:packageName="com.android.settings"
         launcher:className="com.android.settings.Settings"
-        launcher:screen="3"
+        launcher:screen="2"
         launcher:x="1"
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.cooliris.media"
-        launcher:className="com.cooliris.media.Gallery"
-        launcher:screen="3"
+        launcher:packageName="com.google.android.gm"
+        launcher:className="com.google.android.gm.ConversationListActivityGmail"
+        launcher:screen="2"
         launcher:x="2"
         launcher:y="3" />
 
     <favorite
         launcher:packageName="com.farsitel.bazaar"
         launcher:className="com.farsitel.bazaar.MainActivity"
-        launcher:screen="3"
+        launcher:screen="2"
         launcher:x="3"
         launcher:y="3" />
+
+    <!--  Right screen [3] -->
 
     <!--  Far-right screen [4] -->
 
