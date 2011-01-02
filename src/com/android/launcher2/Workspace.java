@@ -1255,6 +1255,20 @@ public class Workspace extends ViewGroup implements DropTarget, DragSource, Drag
         }
     }
 
+    public void scrollNext() {
+        if (mRTL)
+            scrollLeft();
+        else
+            scrollRight();
+    }
+    
+    public void scrollPrevious() {
+        if (mRTL)
+            scrollRight();
+        else
+            scrollLeft();
+    }
+
     public int getScreenForView(View v) {
         int result = -1;
         if (v != null) {

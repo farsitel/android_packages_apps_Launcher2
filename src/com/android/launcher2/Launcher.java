@@ -52,6 +52,7 @@ import android.os.Parcelable;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.provider.LiveFolders;
+import android.text.FriBidi;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -78,6 +79,7 @@ import android.appwidget.AppWidgetProviderInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.HashMap;
 import java.io.DataOutputStream;
 import java.io.FileNotFoundException;
@@ -760,14 +762,14 @@ public final class Launcher extends Activity
     @SuppressWarnings({"UnusedDeclaration"})
     public void previousScreen(View v) {
         if (!isAllAppsVisible()) {
-            mWorkspace.scrollLeft();
+            mWorkspace.scrollPrevious();
         }
     }
 
     @SuppressWarnings({"UnusedDeclaration"})
     public void nextScreen(View v) {
         if (!isAllAppsVisible()) {
-            mWorkspace.scrollRight();
+            mWorkspace.scrollNext();
         }
     }
 
@@ -1657,13 +1659,19 @@ public final class Launcher extends Activity
         float sHeight = height * scale;
 
         LinearLayout preview = new LinearLayout(this);
-
+        
         PreviewTouchHandler handler = new PreviewTouchHandler(anchor);
         ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>(count);
 
+        boolean rtl = FriBidi.isRTL();
+
         for (int i = start; i < end; i++) {
+        	int mirroredI = i;
+        	if (rtl)
+        	    mirroredI = end - i - 1;
+
             ImageView image = new ImageView(this);
-            cell = (CellLayout) workspace.getChildAt(i);
+            cell = (CellLayout) workspace.getChildAt(mirroredI);
 
             final Bitmap bitmap = Bitmap.createBitmap((int) sWidth, (int) sHeight,
                     Bitmap.Config.ARGB_8888);
@@ -1675,11 +1683,11 @@ public final class Launcher extends Activity
 
             image.setBackgroundDrawable(resources.getDrawable(R.drawable.preview_background));
             image.setImageBitmap(bitmap);
-            image.setTag(i);
+            image.setTag(mirroredI);
             image.setOnClickListener(handler);
             image.setOnFocusChangeListener(handler);
             image.setFocusable(true);
-            if (i == mWorkspace.getCurrentScreen()) image.requestFocus();
+            if (mirroredI == mWorkspace.getCurrentScreen()) image.requestFocus();
 
             preview.addView(image,
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

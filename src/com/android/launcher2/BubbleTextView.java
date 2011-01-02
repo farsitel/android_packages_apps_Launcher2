@@ -124,10 +124,17 @@ public class BubbleTextView extends TextView {
         final int left = getCompoundPaddingLeft();
         final int top = getExtendedPaddingTop();
 
-        rect.set(left + layout.getLineLeft(0) - mPaddingH,
-                top + layout.getLineTop(0) -  mPaddingV,
-                Math.min(left + layout.getLineRight(0) + mPaddingH, mScrollX + mRight - mLeft),
-                top + layout.getLineBottom(0) + mPaddingV);
+        if (isRTLText()) {
+            rect.set(Math.max(left + layout.getLineLeft(0) - mPaddingH,  mScrollX),
+                    top + layout.getLineTop(0) -  mPaddingV,
+                    left + layout.getLineRight(0) + mPaddingH,
+                    top + layout.getLineBottom(0) + mPaddingV);
+        } else {
+            rect.set(left + layout.getLineLeft(0) - mPaddingH,
+                    top + layout.getLineTop(0) -  mPaddingV,
+                    Math.min(left + layout.getLineRight(0) + mPaddingH, mScrollX + mRight - mLeft),
+                    top + layout.getLineBottom(0) + mPaddingV);
+        }
         canvas.drawRoundRect(rect, mCornerRadius, mCornerRadius, mPaint);
 
         super.draw(canvas);
