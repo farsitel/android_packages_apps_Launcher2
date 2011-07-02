@@ -38,34 +38,6 @@
         launcher:spanX="4"
         launcher:spanY="1" />
 
-    <favorite
-        launcher:packageName="com.google.android.talk"
-        launcher:className="com.google.android.talk.SigningInActivity"
-        launcher:screen="1"
-        launcher:x="0"
-        launcher:y="3" />
-
-    <favorite
-        launcher:packageName="com.android.deskclock"
-        launcher:className="com.android.deskclock.DeskClock"
-        launcher:screen="1"
-        launcher:x="1"
-        launcher:y="3" />
-
-    <favorite
-        launcher:packageName="com.rovio.angrybirds"
-        launcher:className="com.rovio.ka3d.App"
-        launcher:screen="1"
-        launcher:x="2"
-        launcher:y="3" />
-
-    <favorite
-        launcher:packageName="com.google.android.apps.maps"
-        launcher:className="com.google.android.maps.MapsActivity"
-        launcher:screen="1"
-        launcher:x="3"
-        launcher:y="3" />
-
     <!--  Middle screen [2] -->
     <appwidget
         launcher:packageName="com.farsitel.welcome"
@@ -91,15 +63,15 @@
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.google.android.gm"
-        launcher:className="com.google.android.gm.ConversationListActivityGmail"
+        launcher:packageName="com.android.deskclock"
+        launcher:className="com.android.deskclock.DeskClock"
         launcher:screen="2"
         launcher:x="2"
         launcher:y="3" />
 
     <favorite
-        launcher:packageName="com.farsitel.bazaar"
-        launcher:className="com.farsitel.bazaar.MainActivity"
+        launcher:packageName="com.android.calendar"
+        launcher:className="com.android.calendar.LaunchActivity"
         launcher:screen="2"
         launcher:x="3"
         launcher:y="3" />
